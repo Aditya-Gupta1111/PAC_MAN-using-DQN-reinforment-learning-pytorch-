@@ -144,7 +144,7 @@ def sample(dist, values=None):
     """Sample a random element from a distribution."""
     if isinstance(dist, Counter):
         items = sorted(dist.items())
-        dist, values = zip(*items)
+        values, dist = zip(*items)  # values are keys (actions), dist are probabilities
         dist = list(dist)
         values = list(values)
     dist = normalize(dist)
