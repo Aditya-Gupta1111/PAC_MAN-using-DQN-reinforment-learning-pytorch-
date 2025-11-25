@@ -1,7 +1,3 @@
-# graphicsDisplay.py
-# Modernized, Python 3 compatible version.
-# Purposeful comments only; API kept identical to original.
-
 from graphicsUtils import (
     formatColor, colorToVector, sleep, begin_graphics, end_graphics,
     polygon, square, circle, line, text, changeText, changeColor, refresh,

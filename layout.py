@@ -1,6 +1,3 @@
-# layout.py
-# Modernized Python-3 friendly version. Keeps API identical.
-
 from util import manhattanDistance
 from game import Grid
 import os

@@ -1,6 +1,3 @@
-# DQN_PyTorch.py
-# A PyTorch implementation of the DQN model from DQN.py
-
 import numpy as np
 import torch
 import torch.nn as nn
@@ -13,10 +10,9 @@ class DQN(nn.Module):
         self.params = params
         
         # --- Define the Network Architecture ---
-        # The architecture is identical to the TensorFlow version.
+
         
         # Layer 1 (Convolutional)
-        # 'padding=1' is used to replicate TensorFlow's 'padding=SAME'
         # for a 3x3 kernel.
         self.conv1 = nn.Conv2d(
             in_channels=6, 
@@ -39,7 +35,6 @@ class DQN(nn.Module):
 
         # Layer 3 (Fully connected)
         # We need to calculate the flattened size after the conv layers.
-        # Original TF shape was [batch, width, height, 32]
         flat_size = 32 * params['width'] * params['height']
         self.fc3 = nn.Linear(in_features=flat_size, out_features=256)
         self.relu3 = nn.ReLU()
@@ -60,7 +55,6 @@ class DQN(nn.Module):
                 try:
                     # Load the saved model state
                     self.load_state_dict(torch.load(self.params['load_file']))
-                    # Extract step count from the filename (e.g., 'model-smallGrid_10000_100')
                     step_str = self.params['load_file'].split('_')[-2]
                     self.global_step = int(step_str)
                     print(f"Loaded model, resuming from step {self.global_step}")

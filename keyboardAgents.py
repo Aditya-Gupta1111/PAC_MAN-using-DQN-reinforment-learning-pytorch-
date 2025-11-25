@@ -1,6 +1,3 @@
-# keyboardAgents.py
-# Minimal, modernized keyboard-controlled agents for Pacman.
-
 from game import Agent
 from game import Directions
 import random

@@ -1,7 +1,3 @@
-# pacman.py
-# Modernized Python-3 version (merged parts). Keeps public API and behavior.
-# Comments concise; no license header as requested.
-
 from game import GameStateData, Game, Directions, Actions
 from util import nearestPoint, manhattanDistance
 import util
