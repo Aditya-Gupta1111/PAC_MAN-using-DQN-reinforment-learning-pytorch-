@@ -10,8 +10,6 @@ class DQN(nn.Module):
         self.params = params
         
         # --- Define the Network Architecture ---
-
-        
         # Layer 1 (Convolutional)
         # for a 3x3 kernel.
         self.conv1 = nn.Conv2d(
